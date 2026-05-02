@@ -20,7 +20,22 @@
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.glow-top-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-top-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent 0%, #d9901c 50%, transparent 100%);
+  box-shadow: 0 0 20px 2px rgba(217, 144, 28, 0.4);
+  opacity: 0.8;
 }
