@@ -6,7 +6,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
         <div>
           <div className="flex items-center gap-2 mb-4">
-             <img src="/logo.webp" alt="RishiDisha Logo" className="h-8 w-auto object-contain" />
+            <div className="flex items-center">
+          <img 
+            src="/logo.webp" 
+            alt="RishiDisha Logo" 
+            className="h-12 w-auto object-contain" 
+          />
+          <span className="text-2xl font-serif font-semibold text-[#d9901c]">RishiDisha</span>
+        </div>
+        
           </div>
           <p className="text-sm text-slate-400 mb-4">Guiding you through life's journey with the ancient wisdom of Astrology and Vaastu Shastra.</p>
           <p className="text-[#d9901c] text-sm">★★★★★ 500+ Happy Clients</p>

@@ -41,7 +41,7 @@ export async function POST(req) {
       if (clientEmail) {
         await resend.emails.send({
           from: 'bookings@rishidisha.com', // Must be your verified domain in Resend
-          to: clientEmail,
+          to: 'nischayreddy.t@gmail.com',
           subject: 'Booking Confirmed - Sree Raajarajeswari Jyotisyalayam',
           html: `
             <div style="font-family: sans-serif; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
