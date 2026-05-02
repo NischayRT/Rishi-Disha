@@ -20,8 +20,8 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-3">
-            <img src="/logo.webp" alt="RishiDisha Logo" className="h-10 w-10 object-contain" />
+          <div className="flex-shrink-0 flex items-center">
+            <img src="/logo.webp" alt="RishiDisha Logo" className="h-15 w-15 object-contain" />
             <Link href="/" className="font-serif text-2xl text-[#d9901c] tracking-wide">
               RishiDisha
             </Link>

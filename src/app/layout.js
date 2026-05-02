@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
            <WhatsAppButton text="Chat" className="rounded-full shadow-lg shadow-black/50 py-4 px-6" /> 
         </div>
 
-        <main className="flex-grow pt-20">
+        <main className="flex-grow pt-0 lg:pt-4">
           {children}
         </main>
 
