@@ -82,7 +82,7 @@ export default function AboutPage() {
               {/* Floating Name Card */}
               <div className="absolute bottom-4 left-4 right-4 bg-[#0b0f19]/80 backdrop-blur-md border border-slate-700/50 p-4 rounded-xl">
                 <h3 className="text-white font-serif font-bold text-lg">Garimella VV Satyanarayana Sharma</h3>
-                <p className="text-amber-500 text-xs font-medium tracking-wide">Jyotish Visharad • Vaastu Acharya</p>
+                <p className="text-amber-500 text-xs font-medium tracking-wide">• AstroVaastu Consultant</p>
               </div>
             </div>
           </div>
