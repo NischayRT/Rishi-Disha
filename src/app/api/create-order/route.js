@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
 import Razorpay from 'razorpay';
 
+// Initialize Razorpay using the exact variables you have in your .env.local
 const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID,
+  key_id: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
   key_secret: process.env.RAZORPAY_KEY_SECRET,
 });
 
@@ -18,7 +19,7 @@ const servicePrices = {
 export async function POST(req) {
   try {
     const formData = await req.json();
-    const priceAmount = servicePrices[formData.service] || 1500;
+    const priceAmount = servicePrices[formData.service] || 1000; // Added a fallback price just in case
 
     const options = {
       amount: priceAmount * 100, // Razorpay expects amount in paise
@@ -28,6 +29,8 @@ export async function POST(req) {
         customerName: formData.name,
         customerPhone: formData.phone,
         service: formData.service,
+        // Passing email to the backend so the webhook can use it later!
+        customerEmail: formData.email 
       }
     };
 

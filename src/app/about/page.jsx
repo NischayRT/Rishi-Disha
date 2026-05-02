@@ -76,12 +76,12 @@ export default function AboutPage() {
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-[#111827]">
               <img 
                 src="/profile.webp" 
-                alt="Pt. Rishi Kumar Sharma" 
+                alt="Garimella VV Satyanarayana Sharma" 
                 className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition duration-500"
               />
               {/* Floating Name Card */}
               <div className="absolute bottom-4 left-4 right-4 bg-[#0b0f19]/80 backdrop-blur-md border border-slate-700/50 p-4 rounded-xl">
-                <h3 className="text-white font-serif font-bold text-lg">Pt. Rishi Kumar Sharma</h3>
+                <h3 className="text-white font-serif font-bold text-lg">Garimella VV Satyanarayana Sharma</h3>
                 <p className="text-amber-500 text-xs font-medium tracking-wide">Jyotish Visharad • Vaastu Acharya</p>
               </div>
             </div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
             
             <div className="space-y-6 text-slate-400 text-sm leading-relaxed mb-8">
               <p>
-                Pandit Rishi Kumar Sharma has spent over two decades immersed in the sacred sciences of Jyotish (Vedic Astrology), Vaastu Shastra, and Numerology. Born into a family with a deep reverence for Vedic tradition, his journey began as a young student under the tutelage of renowned astrologer Pandit Shri Rameshwar Sharma.
+                Pandit Garimella VV Satyanarayana Sharma has spent over two decades immersed in the sacred sciences of Jyotish (Vedic Astrology), Vaastu Shastra, and Numerology. Born into a family with a deep reverence for Vedic tradition, his journey began as a young student under the tutelage of renowned astrologer Pandit Shri Rameshwar Sharma.
               </p>
               <p>
                 Over the years, he has guided more than 5,000 individuals and families — helping them navigate career crossroads, find compatible life partners, harmonize their homes and offices, and discover their life purpose through the lens of the cosmos.
