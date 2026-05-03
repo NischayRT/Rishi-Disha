@@ -29,7 +29,14 @@ export async function POST(req) {
         <p><em>Please check your bank app to verify this UTR matches a received payment before proceeding with the consultation.</em></p>
       `,
     });
-
+    await fetch(process.env.GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify({ 
+        sheetName: 'Confirmed Bookings', // <--- Tab name
+        type: 'PAYMENT_CONFIRMATION', 
+        data: { ...formData, utr: utr } 
+      }),
+    });
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Email Error:", error);

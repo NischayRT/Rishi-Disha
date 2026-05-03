@@ -26,7 +26,14 @@ export async function POST(req) {
         <p><em>Message: ${formData.message || 'None'}</em></p>
       `,
     });
-
+    await fetch(process.env.GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify({ 
+        sheetName: 'Payment Initiations', // <--- Tab name
+        type: 'PAYMENT_INITIATION', 
+        data: formData 
+      }),
+    });
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Email Error:", error);
