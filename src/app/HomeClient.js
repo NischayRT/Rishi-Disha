@@ -107,7 +107,17 @@ export default function HomeClient() {
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <input type="text" name="phone" required value={popupData.phone} onChange={handlePopupChange} placeholder="Phone No. *" className="w-full bg-[#0b0f19] border border-slate-700 rounded-md py-3 px-4 text-white focus:outline-none focus:border-[#d9901c]" />
-                      <input type="date" name="dob" required value={popupData.dob} onChange={handlePopupChange} className="w-full bg-[#0b0f19] border border-slate-700 rounded-md py-3 px-4 text-slate-300 focus:outline-none focus:border-[#d9901c] appearance-none" />
+                      <input 
+                        type="text" 
+                        name="dob" 
+                        required 
+                        value={popupData.dob} 
+                        onChange={handlePopupChange} 
+                        placeholder="Date of Birth *"
+                        onFocus={(e) => (e.target.type = "date")}
+                        onBlur={(e) => (e.target.type = e.target.value ? "date" : "text")}
+                        className="w-full bg-[#0b0f19] border border-slate-700 rounded-md py-3 px-4 text-slate-300 focus:outline-none focus:border-[#d9901c] appearance-none" 
+                        />
                     </div>
                     <div>
                       <input type="email" name="email" value={popupData.email} onChange={handlePopupChange} placeholder="Email (Optional)" className="w-full bg-[#0b0f19] border border-slate-700 rounded-md py-3 px-4 text-white focus:outline-none focus:border-[#d9901c]" />
@@ -132,7 +142,7 @@ export default function HomeClient() {
         {/* Left Side: Text Content */}
         <div className="relative z-40 max-w-2xl w-full lg:w-1/2 pt-3 lg:pt-0">
           
-          <div className="flex flex-col sm:flex-row sm:items-center gap-3 md:gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 md:gap-4 mb-2">
             <div className="flex items-center gap-3 md:gap-4 text-[#d9901c] text-[10px] sm:text-xs font-bold tracking-widest uppercase">
               <span className="w-8 h-[1px] bg-[#d9901c]"></span>
               Sree Raajarajeswari Jyotisyalayam
@@ -149,7 +159,7 @@ export default function HomeClient() {
             <span className="text-[#d9901c]">Satyanarayana Sharma</span>
           </h1>
           
-          <h2 className="text-lg md:text-xl text-slate-300 tracking-widest uppercase mb-8 font-medium">
+          <h2 className="text-lg md:text-xl text-slate-300 tracking-widest uppercase mb-4 font-medium">
             AstroVaastu Consultant
           </h2>
           
