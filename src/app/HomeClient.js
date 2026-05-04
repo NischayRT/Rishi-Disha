@@ -85,7 +85,7 @@ export default function HomeClient() {
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
 
-            <div className="bg-gradient-to-b from-[#d9901c]/10 to-transparent p-8">
+            <div className="bg-gradient-to-b p-8">
               {popupStatus === 'success' ? (
                 <div className="text-center py-10 animate-fade-in">
                   <div className="w-16 h-16 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-500/50">
