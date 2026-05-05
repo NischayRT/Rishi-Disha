@@ -83,16 +83,16 @@ export default function HomeClient() {
             </button>
 
             {/* HEADER SECTION (#111827 instead of Pink) */}
-            <div className="bg-[#1e60ef] pt-4 pb-2 px-6 text-center border-b border-slate-700/50">
+            <div className="bg-[#C8B7A6] pt-4 pb-2 px-6 text-center border-b border-slate-700/50">
               
               {/* Circular Icon like the reference image */}
                 <img 
                   src="/logo.webp" 
                   alt="RishiDisha Logo" 
-                  className="w-16 h-16 object-contain flex items-center justify-center mx-auto"
+                  className="w-30 h-30 object-contain flex items-center justify-center mx-auto"
                 />
               
-              <h3 className="text-2xl font-serif font-bold text-white mb-2">Join Now</h3>
+              <h3 className="text-2xl font-serif font-bold text-white mb-1">Join Now</h3>
               
               {/* Subtitles matching the 2-line layout */}
               <div className="text-white text-sm space-y-1 pb-1">
@@ -102,90 +102,96 @@ export default function HomeClient() {
             </div>
 
             {/* FORM SECTION */}
-            <div className="p-5">
-              {popupStatus === 'success' ? (
-                <div className="text-center py-10 animate-fade-in">
-                  <div className="w-16 h-16 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-500/50">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                  </div>
-                  <h3 className="text-2xl font-serif text-slate-900 mb-2">Request Received</h3>
-                  <p className="text-slate-600">We will contact you shortly.</p>
-                </div>
-              ) : (
-                <form onSubmit={submitFreeConsultation} className="space-y-4">
-                  
-                  {/* Name Input with Icon */}
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" /></svg>
+            <div className="p-5 relative">
+              
+              {/* Mandala Background Layer */}
+<div className="absolute inset-0 pointer-events-none bg-[url('/mandala.webp')] bg-no-repeat z-0 bg-[length:190%] [background-position-x:-330px] contrast-[.8]"></div>
+              <div className="relative z-10">
+                {popupStatus === 'success' ? (
+                  <div className="text-center py-10 animate-fade-in">
+                    <div className="w-16 h-16 bg-green-500/20 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-500/50">
+                      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
                     </div>
-                    <input type="text" name="name" required value={popupData.name} onChange={handlePopupChange} placeholder="Your Name *" className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c]" />
+                    <h3 className="text-2xl font-serif text-slate-900 mb-2">Request Received</h3>
+                    <p className="text-slate-600">We will contact you shortly.</p>
                   </div>
-
-                  {/* Phone Input with Icon */}
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                ) : (
+                  <form onSubmit={submitFreeConsultation} className="space-y-4">
+                    
+                    {/* Name Input with Icon */}
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" /></svg>
+                      </div>
+                      <input type="text" name="name" required value={popupData.name} onChange={handlePopupChange} placeholder="Your Name *" className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c] bg-opacity-90" />
                     </div>
-                    <input type="text" name="phone" required value={popupData.phone} onChange={handlePopupChange} placeholder="Phone No. *" className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c]" />
-                  </div>
 
-                  {/* Email Input with Icon */}
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+                    {/* Phone Input with Icon */}
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                      </div>
+                      <input type="text" name="phone" required value={popupData.phone} onChange={handlePopupChange} placeholder="Phone No. *" className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c] bg-opacity-90" />
                     </div>
-                    <input type="email" name="email" value={popupData.email} onChange={handlePopupChange} placeholder="Email Address (Optional)" className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c]" />
-                  </div>
 
-                  {/* DOB Input with Icon */}
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" /></svg>
+                    {/* Email Input with Icon */}
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+                      </div>
+                      <input type="email" name="email" value={popupData.email} onChange={handlePopupChange} placeholder="Email Address (Optional)" className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c] bg-opacity-90" />
                     </div>
-                    <input 
-                      type="text" 
-                      name="dob" 
-                      required 
-                      value={popupData.dob} 
-                      onChange={handlePopupChange} 
-                      placeholder="Date of Birth *"
-                      onFocus={(e) => (e.target.type = "date")}
-                      onBlur={(e) => (e.target.type = e.target.value ? "date" : "text")}
-                      className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c] appearance-none" 
-                      />
-                  </div>
 
-                  {/* Message Input with Icon */}
-                  <div className="relative">
-                    <div className="absolute top-3 left-0 pl-3 flex items-start pointer-events-none text-slate-500">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" /></svg>
+                    {/* DOB Input with Icon */}
+                    <div className="relative">
+                      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" /></svg>
+                      </div>
+                      <input 
+                        type="text" 
+                        name="dob" 
+                        required 
+                        value={popupData.dob} 
+                        onChange={handlePopupChange} 
+                        placeholder="Date of Birth *"
+                        onFocus={(e) => (e.target.type = "date")}
+                        onBlur={(e) => (e.target.type = e.target.value ? "date" : "text")}
+                        className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c] appearance-none bg-opacity-90" 
+                        />
                     </div>
-                    <textarea name="message" required value={popupData.message} onChange={handlePopupChange} rows="1" placeholder="Briefly describe what you need guidance on..." className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c] resize-none"></textarea>
-                  </div>
 
-                  {/* Pill-shaped Submit Button matching image style */}
-                  <button type="submit" disabled={isSubmitting} className="w-full bg-[#1e60ef] font-bold py-3.5 rounded-full hover:bg-[#c48218] text-white transition disabled:opacity-70 mt-2 flex items-center justify-center gap-2">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-                    {isSubmitting ? "Submitting..." : "Submit Enquiry"}
-                  </button>
+                    {/* Message Input with Icon */}
+                    <div className="relative">
+                      <div className="absolute top-3 left-0 pl-3 flex items-start pointer-events-none text-slate-500">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd" /></svg>
+                      </div>
+                      <textarea name="message" required value={popupData.message} onChange={handlePopupChange} rows="1" placeholder="Briefly describe what you need guidance on..." className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c] resize-none bg-opacity-90"></textarea>
+                    </div>
 
-                  {/* Contact Footer matching the image */}
-                  <div className="text-center pt-3">
-                    <p className="text-slate-900 text-xs flex items-center justify-center gap-1.5">
-                      <svg className="w-3.5 h-3.5 text-[#d9901c]" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
-                      <span>Call: </span>
-                      <a href="tel:+919550553427" className="hover:text-[#d9901c] transition-colors">
-                        +91 95505 53427
-                      </a>
-                      <span className="text-slate-400 mx-0.5">|</span>
-                      <a href="tel:+919959629678" className="hover:text-[#d9901c] transition-colors">
-                        +91 99596 29678
-                      </a>
-                    </p>
-                  </div>                
-                </form>
-              )}
+                    {/* Pill-shaped Submit Button matching image style */}
+                    <button type="submit" disabled={isSubmitting} className="w-full bg-[#C8B7A6] font-bold py-3.5 rounded-full hover:bg-[#c48218] text-slate-800 transition disabled:opacity-70 mt-2 flex items-center justify-center gap-2 relative z-10">
+                      {/* Added 'rotate-90' here */}
+                      <svg className="w-5 h-5 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                      {isSubmitting ? "Submitting..." : "Submit Enquiry"}
+                    </button>
+
+                    {/* Contact Footer matching the image */}
+                    <div className="text-center pt-3 relative z-10">
+                      <p className="text-slate-900 text-xs flex items-center justify-center gap-1.5">
+                        <svg className="w-3.5 h-3.5 text-[#d9901c]" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                        <span>Call: </span>
+                        <a href="tel:+919550553427" className="hover:text-[#d9901c] transition-colors font-medium">
+                          +91 95505 53427
+                        </a>
+                        <span className="text-slate-400 mx-0.5">|</span>
+                        <a href="tel:+919959629678" className="hover:text-[#d9901c] transition-colors font-medium">
+                          +91 99596 29678
+                        </a>
+                      </p>
+                    </div>                
+                  </form>
+                )}
+              </div>
             </div>
           </div>
         </div>
