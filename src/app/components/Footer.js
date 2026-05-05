@@ -53,8 +53,15 @@ export default function Footer() {
             </li>
             <li>
               <span className="block text-white">Location</span>
-              <a href="https://maps.app.goo.gl/bWznF9abdovu1rtJ7" target="_blank" rel="noopener noreferrer" className="hover:text-[#d9901c] transition-colors">
-                India (Online & In-Person)
+              <a 
+                href="https://maps.app.goo.gl/bWznF9abdovu1rtJ7" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-[#d9901c] transition-colors inline-block"
+              >
+                Sri Raajarajeswari Jyotisyalayam<br />
+                <span>Hyderabad, Telangana</span><br />
+                <span>India (Online & In-Person)</span>
               </a>
             </li>
           </ul>
