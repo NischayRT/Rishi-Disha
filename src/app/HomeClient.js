@@ -105,7 +105,7 @@ export default function HomeClient() {
             <div className="p-5 relative">
               
               {/* Mandala Background Layer */}
-<div className="absolute inset-0 pointer-events-none bg-[url('/mandala.webp')] bg-no-repeat z-0 bg-[length:190%] [background-position-x:-330px] contrast-[.8]"></div>
+<div className="absolute inset-0 pointer-events-none bg-[url('/mandala.jpeg')] bg-no-repeat z-0 bg-[length:100%]"></div>
               <div className="relative z-10">
                 {popupStatus === 'success' ? (
                   <div className="text-center py-10 animate-fade-in">
