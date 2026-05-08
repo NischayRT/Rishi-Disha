@@ -153,9 +153,13 @@ export default function ServicesClient() {
                       </svg>
                       Book a Session
                     </Link>
-                    <button className="px-6 py-2.5 bg-transparent border border-slate-700 text-slate-300 rounded-md hover:bg-slate-800 transition font-medium text-sm flex items-center gap-2">
+                    {/* Changed from button to a tag with href */}
+                    <a 
+                      href="tel:+919959629678" 
+                      className="px-6 py-2.5 bg-transparent border border-slate-700 text-slate-300 rounded-md hover:bg-slate-800 transition font-medium text-sm flex items-center gap-2"
+                    >
                       Call to Enquire
-                    </button>
+                    </a>
                   </div>
                 </div>
 
@@ -192,9 +196,13 @@ export default function ServicesClient() {
             <Link href="/book" className="px-8 py-3 bg-[#d9901c] text-black rounded-md hover:bg-[#c48218] transition font-bold flex items-center justify-center gap-2">
               Book a Session
             </Link>
-            <button className="px-8 py-3 bg-transparent border border-[#d9901c] text-[#d9901c] rounded-md hover:bg-[#d9901c]/10 transition font-medium flex items-center justify-center gap-2">
+            {/* Changed from button to a tag with href */}
+            <a 
+              href="tel:+919959629678" 
+              className="px-8 py-3 bg-transparent border border-[#d9901c] text-[#d9901c] rounded-md hover:bg-[#d9901c]/10 transition font-medium flex items-center justify-center gap-2"
+            >
               Call Now
-            </button>
+            </a>
           </div>
         </div>
       </section>
