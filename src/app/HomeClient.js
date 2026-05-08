@@ -152,12 +152,12 @@ export default function HomeClient() {
                         name="dob" 
                         required 
                         value={popupData.dob} 
-                        onChange={handlePopupChange} 
+                        onChange={handlePopupChange}
                         placeholder="Date of Birth *"
                         onClick={(e) => { e.target.type = "date"; e.target.showPicker && e.target.showPicker(); }}
                         onFocus={(e) => (e.target.type = "date")}
                         onBlur={(e) => (e.target.type = e.target.value ? "date" : "text")}
-                        className="w-full bg-[#0b0f19] border border-slate-700 rounded-md py-3 px-4 text-slate-300 focus:outline-none focus:border-[#d9901c] [color-scheme:dark]" 
+                        className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c] bg-opacity-90" 
                       />
                     </div>
 
