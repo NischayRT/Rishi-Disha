@@ -147,17 +147,18 @@ export default function HomeClient() {
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500">
                         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" /></svg>
                       </div>
-                      <input 
+                     <input 
                         type="text" 
                         name="dob" 
                         required 
                         value={popupData.dob} 
                         onChange={handlePopupChange} 
                         placeholder="Date of Birth *"
+                        onClick={(e) => { e.target.type = "date"; e.target.showPicker && e.target.showPicker(); }}
                         onFocus={(e) => (e.target.type = "date")}
                         onBlur={(e) => (e.target.type = e.target.value ? "date" : "text")}
-                        className="w-full bg-white border border-slate-300 rounded-md py-2 pl-11 pr-4 text-black placeholder-slate-500 focus:outline-none focus:border-[#d9901c] focus:ring-1 focus:ring-[#d9901c] appearance-none bg-opacity-90" 
-                        />
+                        className="w-full bg-[#0b0f19] border border-slate-700 rounded-md py-3 px-4 text-slate-300 focus:outline-none focus:border-[#d9901c] [color-scheme:dark]" 
+                      />
                     </div>
 
                     {/* Message Input with Icon */}

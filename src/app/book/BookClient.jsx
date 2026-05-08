@@ -199,15 +199,28 @@ export default function BookClient() {
                 </div>
               </div>
 
+              {/* DOB & TOB */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-xs font-bold text-slate-300 mb-1 uppercase tracking-wider">Date of Birth *</label>
-                  <input type="text" name="dob" value={formData.dob} onChange={handleChange} onFocus={(e) => (e.target.type = "date")} onBlur={(e) => (e.target.type = e.target.value ? "date" : "text")} placeholder="Select Date" className="w-full bg-[#0b0f19] border border-slate-700 rounded-md py-3 px-4 text-slate-300 focus:outline-none focus:border-[#d9901c] appearance-none" />
+                  <input 
+                    type="date" 
+                    name="dob" 
+                    value={formData.dob} 
+                    onChange={handleChange} 
+                    className="w-full bg-[#0b0f19] border border-slate-700 rounded-md py-3 px-4 text-slate-300 focus:outline-none focus:border-[#d9901c] block min-h-[50px] [color-scheme:dark]" 
+                  />
                   {errors.dob && <p className="text-red-400 text-xs mt-1">{errors.dob}</p>}
                 </div>
                 <div>
                   <label className="block text-xs font-bold text-slate-300 mb-1 uppercase tracking-wider">Time of Birth</label>
-                  <input type="text" name="tob" value={formData.tob} onChange={handleChange} onFocus={(e) => (e.target.type = "time")} onBlur={(e) => (e.target.type = e.target.value ? "time" : "text")} placeholder="Select Time" className="w-full bg-[#0b0f19] border border-slate-700 rounded-md py-3 px-4 text-slate-300 focus:outline-none focus:border-[#d9901c] appearance-none" />
+                  <input 
+                    type="time" 
+                    name="tob" 
+                    value={formData.tob} 
+                    onChange={handleChange} 
+                    className="w-full bg-[#0b0f19] border border-slate-700 rounded-md py-3 px-4 text-slate-300 focus:outline-none focus:border-[#d9901c] block min-h-[50px] [color-scheme:dark]" 
+                  />
                 </div>
               </div>
 
