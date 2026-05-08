@@ -145,7 +145,7 @@ export default function ServicesClient() {
 
                   <div className="flex flex-wrap gap-4">
                     <Link
-                      href="/contact"
+                      href="/book"
                       className="px-6 py-2.5 bg-[#d9901c] text-black rounded-md hover:bg-[#c48218] transition font-bold text-sm flex items-center gap-2"
                     >
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -189,7 +189,7 @@ export default function ServicesClient() {
             Reach out and we'll guide you to the consultation that best fits your needs. First-time enquiries are always welcome.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact" className="px-8 py-3 bg-[#d9901c] text-black rounded-md hover:bg-[#c48218] transition font-bold flex items-center justify-center gap-2">
+            <Link href="/book" className="px-8 py-3 bg-[#d9901c] text-black rounded-md hover:bg-[#c48218] transition font-bold flex items-center justify-center gap-2">
               Book a Session
             </Link>
             <button className="px-8 py-3 bg-transparent border border-[#d9901c] text-[#d9901c] rounded-md hover:bg-[#d9901c]/10 transition font-medium flex items-center justify-center gap-2">

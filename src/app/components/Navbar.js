@@ -22,7 +22,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img src="/logo.webp" alt="RishiDisha Logo" className="h-15 w-15 object-contain" />
-            <Link href="/" className="font-serif text-2xl text-[#d9901c] tracking-wide">
+            <Link href="/" className="font-serif text-2xl text-[#d9901c] tracking-wide ml-2">
               RishiDisha
             </Link>
           </div>
@@ -40,12 +40,15 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Call / WhatsApp Buttons (Desktop) */}
+          {/* Call & Book Buttons (Desktop) */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+919959629678" className="text-[#d9901c] border border-[#d9901c] px-4 py-2 rounded-md hover:bg-[#d9901c]/10 transition text-sm flex items-center gap-2">
+            <a href="tel:+919959629678" className="text-slate-300 hover:text-white transition text-sm flex items-center gap-2 hover:bg-[#d9901c] border border-[#fff] hover:border-[#d9901c] px-5 py-2.5 rounded-md">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-              Call Now
+              Call
             </a>
+            <Link href="/book" className="bg-[#d9901c] text-black px-5 py-2.5 rounded-md hover:bg-[#c48218] transition text-sm font-bold shadow-lg shadow-[#d9901c]/20">
+              Book Now
+            </Link>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -74,13 +77,16 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)} // Close menu when clicked
+                onClick={() => setIsOpen(false)}
                 className="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-[#d9901c] hover:bg-slate-800/50"
               >
                 {link.name}
               </Link>
             ))}
             <div className="pt-4 flex flex-col gap-3">
+              <Link href="/book" onClick={() => setIsOpen(false)} className="w-full text-center bg-[#d9901c] text-black px-4 py-3 rounded-md font-bold shadow-lg shadow-[#d9901c]/20">
+                Book Now
+              </Link>
               <a href="tel:+919959629678" className="w-full text-center text-[#d9901c] border border-[#d9901c] px-4 py-3 rounded-md hover:bg-[#d9901c]/10 transition font-medium">
                 Call Us
               </a>
