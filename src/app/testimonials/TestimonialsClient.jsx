@@ -108,7 +108,7 @@ export default function TestimonialsClient() {
 
       {/* Featured Testimonial */}
       <section className="max-w-6xl mx-auto px-4 pb-20">
-        <div className="bg-[#111827] border border-slate-800 rounded-2xl p-8 md:p-12 relative">
+        <div className="glow-top-border bg-[#111827] border border-slate-800 rounded-2xl p-8 md:p-12 relative">
           <div className="absolute top-8 left-8 text-slate-800 opacity-30 text-6xl font-serif leading-none">"</div>
           <div className="relative z-10 pl-8 md:pl-12">
             <p className="text-slate-300 text-lg md:text-xl italic leading-relaxed mb-8">
@@ -129,7 +129,7 @@ export default function TestimonialsClient() {
       <section className="max-w-7xl mx-auto px-4 pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-[#111827] border border-slate-800 p-8 rounded-xl flex flex-col h-full hover:border-slate-700 transition">
+            <div key={i} className="glow-top-border bg-[#111827] border border-slate-800 p-8 rounded-xl flex flex-col h-full hover:border-slate-700 transition">
               <div className="flex text-amber-500 text-[10px] mb-4">★★★★★</div>
               <span className="inline-block px-3 py-1 bg-[#0b0f19] border border-slate-700 rounded-full text-amber-500 text-[10px] uppercase tracking-wider mb-6 w-fit">
                 {t.service}
@@ -161,12 +161,12 @@ export default function TestimonialsClient() {
            </p>
            
            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button className="px-8 py-3 bg-[#25D366] text-white rounded-md hover:bg-[#20b858] transition font-medium text-sm flex items-center justify-center gap-2">
+              <a href="https://wa.me/919959629678" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-[#25D366] text-white rounded-md hover:bg-[#20b858] transition font-medium text-sm flex items-center justify-center gap-2">
                 WhatsApp Us
-              </button>
-              <button className="px-8 py-3 bg-transparent border border-amber-500 text-amber-500 rounded-md hover:bg-amber-500/10 transition font-medium text-sm flex items-center justify-center gap-2">
+              </a>
+              <a href="tel:+919959629678" className="px-8 py-3 bg-transparent border border-amber-500 text-amber-500 rounded-md hover:bg-amber-500/10 transition font-medium text-sm flex items-center justify-center gap-2">
                 Call Now
-              </button>
+              </a>
            </div>
         </div>
       </section>
